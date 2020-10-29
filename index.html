@@ -1,0 +1,13 @@
+<html>
+<head>
+<script>
+function color(t){
+	document.getElementById("div").style.background=t.value;
+}
+</script>
+</head>
+<body>
+color:<input onchange="color(this)" value="red" style="width:200px;"><br/><br/>
+<div style="width:200px;height:200px;background:red;" id="div"></div>
+</body>
+</html>
