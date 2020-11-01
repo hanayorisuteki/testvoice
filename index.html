@@ -73,7 +73,7 @@
 <script>
 $(function(){
 
-		var lang = "jp";
+		var lang = "sc";
 		
 		for (var i = 0 ;i < no.length; i++) {
 			$("#body").append("<div class='title'><span id='t'>" + no[i].sc + "</span></div>")
@@ -102,6 +102,10 @@ $(function(){
 						$("#v" +  i).append("<div class='button' id='" + no[i].voice[j].file + "'>" + no[i].voice[j].jp + "</div>")
 					}
 				}
+				$(".button").click(function(){
+				w = new Audio("voice/" + this.id + ".wav")
+				w.play();
+		})
 			}else if(lang == "sc"){
 				$("#ctrl").html("控制")
 				$("#stop").html("暂停")
@@ -112,6 +116,10 @@ $(function(){
 						$("#v" +  i).append("<div class='button' id='" + no[i].voice[j].file + "'>" + no[i].voice[j].sc + "</div>")
 					}
 				}
+				$(".button").click(function(){
+				w = new Audio("voice/" + this.id + ".wav")
+				w.play();
+		})
 			}
 		})
 	
